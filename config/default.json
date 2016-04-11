@@ -1,0 +1,12 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/pokemonhub",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "Jf9+Vkd6ajn9ndyr57ANlZXE/662lQqKGkkJqSMSwulQwow7Ou8cbP6ogX+Yv3Wn/b9ltoKndjThG+Wa1wVEqA=="
+    },
+    "local": {}
+  }
+}
