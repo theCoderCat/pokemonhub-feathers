@@ -1,10 +1,14 @@
-// (function() {
-    var file = document.getElementById('csv').files[0];
+(function() {
     var parseBtn = document.getElementById('do-parsing');
     var resultBox = document.getElementById('results');
-    
+
     var parseCSV = function() {
-        Papa.parse(file, buildConfig());
+        var file;
+        if (file = document.getElementById('csv').files[0]) {
+            Papa.parse(file, buildConfig());
+        } else {
+            alert('please choose a file'); return;
+        }
 
     }
 
@@ -33,6 +37,6 @@
     var errorFn = function(err, file) {
         console.log("ERROR:", err, file);
     }
-    
+
     parseBtn.addEventListener('click', parseCSV);
-// })();
+})();
